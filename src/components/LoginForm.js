@@ -7,19 +7,15 @@ import {emailChange, passwordChange, loginUser} from '../actions';
 class LoginForm extends Component {
 
     onEmailChange(text) {
-        console.log('onEmailChange');
         this.props.emailChange(text);
     }
 
     onPasswordChange(text) {
-        console.log('onPasswordChange');
         this.props.passwordChange(text);
     }
 
     onButtonPress() {
-        console.log('onButtonPress');
         const {email, password} = this.props;
-        console.log({email, password});
         this.props.loginUser({email, password});
     }
 
